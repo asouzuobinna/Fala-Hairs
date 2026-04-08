@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>FALA Hairs — Luxury Hair Extensions</title>
+  <meta name="description" content="Premium human hair extensions by Fala Production Ltd. 100% authentic, ethically sourced luxury hair bundles, closures and frontals. International delivery available."/>
+  <meta name="theme-color" content="#4A0E2B"/>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+  <!-- ── STATIC NAVBAR (always present, never re-rendered) ──────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="nav('home')" role="button" tabindex="0">
+        <svg width="34" height="37" viewBox="0 0 100 110" fill="none">
+          <circle cx="50" cy="48" r="46" stroke="#F2C4C4" stroke-width="3.5" fill="none" stroke-dasharray="260 25" stroke-linecap="round"/>
+          <circle cx="50" cy="48" r="35" fill="#4A0E2B"/>
+          <text x="50" y="62" text-anchor="middle" fill="white" font-size="36" font-family="Georgia,serif" font-weight="bold">fl</text>
+          <circle cx="83" cy="82" r="5.5" fill="#4A0E2B"/>
+        </svg>
+        <div>
+          <div class="nav-brand-name">FALA HAIRS</div>
+          <div class="nav-brand-sub">Luxury Collection</div>
+        </div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link" data-page="home"     onclick="nav('home')">Home</a>
+        <a class="nav-link" data-page="mart"     onclick="nav('mart')">The Mart</a>
+        <a class="nav-link" data-page="lookbook" onclick="nav('lookbook')">Lookbook</a>
+        <a class="nav-link" data-page="about"    onclick="nav('about')">About</a>
+      </div>
+      <div class="nav-right">
+        <button class="btn btn-gold btn-sm" onclick="nav('mart')">Shop</button>
+        <button class="nav-burger" id="navBurger" onclick="toggleDrawer()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE DRAWER ───────────────────────────────────────────── -->
+  <div class="nav-drawer" id="navDrawer">
+    <a class="nav-drawer-link" onclick="nav('home')">Home <span>→</span></a>
+    <a class="nav-drawer-link" onclick="nav('mart')">The Mart <span>→</span></a>
+    <a class="nav-drawer-link" onclick="nav('lookbook')">Lookbook <span>→</span></a>
+    <a class="nav-drawer-link" onclick="nav('about')">About <span>→</span></a>
+    <button class="btn btn-gold btn-lg" onclick="nav('mart')" style="margin-top:16px">Shop The Collection</button>
+  </div>
+
+  <!-- ── PAGE CONTENT ─────────────────────────────────────────────── -->
+  <div id="app"></div>
+
+  <!-- ── QUICK-VIEW MODAL (cover only) ────────────────────────────── -->
+  <div id="modalOv" class="modal-ov hidden" onclick="closeModal()">
+    <div id="modalContent" class="modal-sheet" onclick="event.stopPropagation()"></div>
+  </div>
+
+  <!-- ── TOAST ─────────────────────────────────────────────────────── -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

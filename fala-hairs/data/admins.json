@@ -1,0 +1,25 @@
+{
+  "supreme": {
+    "email": "admin@falahairs.com",
+    "passwordHash": "7364adc0dcd1d8497f117fb1dc1fd25ee776e619f0164f8be470ceb8bc73464f",
+    "hashAlgo": "sha256",
+    "name": "Fala Ltd",
+    "role": "supreme"
+  },
+  "subAdmins": [
+    {
+      "email": "agent1@falahairs.com",
+      "passwordHash": "6145ce6b8d8f5b0af6138072ae95a65a25a13f982ab500bdffbabdf40eb97bb6",
+      "hashAlgo": "sha256",
+      "name": "Agent One",
+      "role": "sub"
+    },
+    {
+      "email": "agent2@falahairs.com",
+      "passwordHash": "b6ae5a1880ea53391703b4adac16cefae58ed618fc214a2e055255af9b3c60bf",
+      "hashAlgo": "sha256",
+      "name": "Agent Two",
+      "role": "sub"
+    }
+  ]
+}
